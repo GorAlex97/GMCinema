@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Cinema Default Page</title>
+		<script src="src/swfobject.js"></script>
+		<script src="src/youtube.js"></script>
+		<script src="src/theater.js"></script>
+	</head>
+	<body>
+		<div id="content" class="welcome-page">
+			<div class="curtain curtain-side right-curtain"></div>
+			<div class="curtain curtain-side left-curtain"></div>
+			<div class="curtain top-curtain"></div>
+			<div class="header-container">
+				<div class="welcome"></div>
+			</div>
+			<div class="info-container">
+				<div id="noflash" class="info warning"></div>
+				<div class="info">To request a video, open the queue by holding down Q and press the 'Request Video' button</div>
+				<p>GorAlex97</p>
+			</div>
+			<div class="footer-container"></div>
+		</div>
+		<div id="player-container">
+			<div id="player"></div>
+		</div>
+		<link rel="stylesheet" href="src/style.css">
+		<script src="src/froogaloop2.js"></script>
+		<script>
+			var elem = document.getElementById("noflash");
+
+			if(!swfobject.hasFlashPlayerVersion("1")) {
+				elem.innerText = "Adobe Flash Player not detected! Some videos may not load, press F2 for installation instructions.";
+				gmod.detectFlash(false);
+			}
+		</script>
+	</body>
+</html>
