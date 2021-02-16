@@ -4,7 +4,6 @@
 		<meta charset="UTF-8">
 		<title>Cinema - Video Search</title>
 		<link href="src/style.css" rel="stylesheet">
-		<script src="src/script.js"></script>
 		<link href="https://fonts.googleapis.com/css?family=Oswald" rel="stylesheet">
 	</head>
 	<body>
@@ -38,8 +37,23 @@
 						</tr>
 					</table>
 				</div>
-				<!-- <div id="tip" class="notice"></div> -->
 			</section>
 		</div>
+		<script>
+			// Event called when a service is hovered
+			function hoverService() {
+				console.log( "RUNLUA: surface.PlaySound('garrysmod/ui_hover.wav');" );
+			}
+
+			// Event called when a service is selected
+			function selectService(name, url) {
+				console.log( "RUNLUA: surface.PlaySound('garrysmod/ui_click.wav');" );
+
+				ga('send', 'event', 'services', 'visit', name);
+				setTimeout(function(){
+					window.location.href = url;
+				}, 100);
+			}
+		</script>
 	</body>
 </html>
