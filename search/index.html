@@ -11,8 +11,8 @@
 			<ul>
 				<li><a href="../">Cinema</a></li>
 				<li><a href="./" class="active">Search</a></li>
-				<li><a href="http://steamcommunity.com/sharedfiles/filedetails/?id=118824086">Workshop</a></li>
-				<li><a href="http://steamcommunity.com/workshop/filedetails/discussion/118824086/828935672624191282/">Help</a></li>
+				<li><a href="https://steamcommunity.com/sharedfiles/filedetails/?id=118824086">Workshop</a></li>
+				<li><a href="https://steamcommunity.com/workshop/filedetails/discussion/118824086/828935672624191282/">Help</a></li>
 			</ul>
 		</nav>
 		<div style="position: absolute; top: 24px; left: 0; right: 0; bottom: 0;">
@@ -22,15 +22,15 @@
 					<table>
 						<tr>
 							<td rowspan="2">
-								<service onclick="selectService('YouTube', 'http://www.youtube.com/');" onmouseover="hoverService();" style="background: url('https://upload.wikimedia.org/wikipedia/commons/thumb/9/9c/YouTube_social_media_logo.svg/300px-YouTube_social_media_logo.svg.png') no-repeat red; background-size: contain; background-position: center center; width: 300px; height: 315px;"></service>
+								<service onclick="selectService('https://www.youtube.com/');" onmouseover="hoverService();" style="background: url('https://upload.wikimedia.org/wikipedia/commons/thumb/9/9c/YouTube_social_media_logo.svg/300px-YouTube_social_media_logo.svg.png') no-repeat red; background-size: contain; background-position: center center; width: 300px; height: 315px;" title="YouTube"></service>
 							</td><td>
-								<service onclick="selectService('Reddit/videos', 'http://www.reddit.com/r/videos/');" onmouseover="hoverService();" style="background: url('https://www.logo.wine/a/logo/Reddit/Reddit-Vertical-Complete-White-Logo.wine.svg') no-repeat #FF4500; background-size: 60%; background-position: top center; width: 300px; height: 150px;">
+								<service onclick="selectService('https://www.reddit.com/r/videos/');" onmouseover="hoverService();" style="background: url('https://www.logo.wine/a/logo/Reddit/Reddit-Vertical-Complete-White-Logo.wine.svg') no-repeat #FF4500; background-size: 60%; background-position: top center; width: 300px; height: 150px;" title="Reddit/videos">
 									<span class="subtext">Videos</span>
 								</service>
 							</td>
 						</tr><tr>
 							<td>
-								<service onclick="selectService('Reddit/fullmoviesonyoutube', 'http://www.reddit.com/r/fullmoviesonyoutube/');" onmouseover="hoverService();" style="background: url('https://www.logo.wine/a/logo/Reddit/Reddit-Vertical-Complete-White-Logo.wine.svg') no-repeat #FF4500; background-size: 60%; background-position: top center; width: 300px; height: 150px;">
+								<service onclick="selectService('https://www.reddit.com/r/fullmoviesonyoutube/');" onmouseover="hoverService();" style="background: url('https://www.logo.wine/a/logo/Reddit/Reddit-Vertical-Complete-White-Logo.wine.svg') no-repeat #FF4500; background-size: 60%; background-position: top center; width: 300px; height: 150px;" title="Reddit/fullmoviesonyoutube">
 									<span class="subtext">FullMoviesOnYouTube</span>
 								</service>
 							</td>
@@ -40,19 +40,12 @@
 			</section>
 		</div>
 		<script>
-			// Event called when a service is hovered
-			function hoverService() {
-				console.log( "RUNLUA: surface.PlaySound('garrysmod/ui_hover.wav');" );
+			function hoverService(){
+				console.log("RUNLUA: surface.PlaySound('garrysmod/ui_hover.wav');");
 			}
-
-			// Event called when a service is selected
-			function selectService(name, url) {
-				console.log( "RUNLUA: surface.PlaySound('garrysmod/ui_click.wav');" );
-
-				ga('send', 'event', 'services', 'visit', name);
-				setTimeout(function(){
-					window.location.href = url;
-				}, 100);
+			function selectService(url){
+				console.log("RUNLUA: surface.PlaySound('garrysmod/ui_click.wav');");
+				setTimeout(function(){window.location.href = url;}, 100);
 			}
 		</script>
 	</body>
