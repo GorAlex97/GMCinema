@@ -1,6 +1,9 @@
 html,
 body,
-div {
+div,
+h3,
+b,
+i {
 	border: 0;
 	font-size: 100%;
 	font: inherit;
