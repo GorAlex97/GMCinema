@@ -1,3 +1,3 @@
-# GMCinema
+# 🎬 GMCinema
 
-## Garry's Mode - Cinema Mod inteface for player
+## Garry's Mode - Cinema Mod inteface for player 🔴
